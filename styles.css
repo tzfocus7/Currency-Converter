@@ -1,0 +1,144 @@
+/* importing google font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #675afe;
+}
+.wrapper{
+    width: 400px;
+    padding: 30px;
+    border-radius: 7px;
+    background: #fff;
+}
+.wrapper :where(header, p, img){
+    pointer-events: none;
+}
+.wrapper header{
+    font-size: 28px;
+    font-weight:600;
+    text-align: center;
+}
+.wrapper form{
+    margin: 40px 0 20px 0;
+}
+form :where(input, select, button){
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+form p{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+form input{
+    height: 50px;
+    font-size: 17px;
+    padding: 0 15px;
+    border: 1px solid #999;
+    transition: all 0.2s ease;
+}
+form input:focus{
+    padding: 0 14px;
+    border: 2px solid #675afe;
+}
+form .drop-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.drop-list .select-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 115px;
+    height: 45px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+.select-box select{
+    width: auto;
+    font-size: 16px;
+    margin: 0 -5px 0 5px;
+}
+.select-box select::-webkit-scrollbar{
+    width: 8px;
+}
+.select-box select::-webkit-scrollbar-track{
+    background: #fff;
+}
+.select-box select::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 8px;
+    border-right: 2px solid #fff;
+}
+.select-box img{
+    max-width: 25px;
+}
+.drop-list .icon{
+    cursor: pointer;
+    font-size: 22px;
+    margin-top: 30px;
+}
+form .exchange-rate{
+    font-size: 17px;
+    margin: 20px 0 25px;
+}
+form button{
+    height: 52px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    background: #675afe;
+}
+
+@media (max-width: 450px){
+    .wrapper{
+        width: 90%;
+    }
+}
+
+@media (max-width: 372px){
+    .drop-list .icon{
+        margin: 15px 0 0 45%;
+    }
+    form .drop-list{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+    .drop-list .select-box{
+        width: 100%;
+        border: 1px solid #999;
+        border-radius: 5px;
+        justify-content: space-between;
+        height: 45px;
+        padding: 20px;
+    }
+    .drop-list .from, .drop-list .to{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;    
+    }
+
+    .select-box select{
+        width: 70px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 357px){
+   
+}
